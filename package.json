@@ -1,0 +1,38 @@
+{
+  "name": "knowledgebase",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "vue-tsc  --noEmit&& vite build",
+    "preview": "vite preview",
+    "scp": "scp -r dist/* frontEnd@132.232.47.47:/home/work/websites/xiaoxi.qingtime.cn/",
+    "sync": "rsync -r dist/* frontEnd@132.232.47.47:/home/work/websites/xiaoxi.qingtime.cn/",
+    "deploy": "npm run build && npm run sync"
+  },
+  "dependencies": {
+    "@types/node": "^20.4.9",
+    "@vueuse/components": "^10.4.1",
+    "@vueuse/core": "^10.4.1",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.9",
+    "element-plus": "^2.3.14",
+    "md5": "^2.3.0",
+    "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "qiniu-js": "^3.4.1",
+    "sass": "^1.65.1",
+    "sass-loader": "^13.3.2",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vue-tsc": "^1.8.5"
+  }
+}
